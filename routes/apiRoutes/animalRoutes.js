@@ -6,6 +6,7 @@ const { animals } = require('../../data/animals')
 
 router.get('/animals',(req, res) => { //req means REQUIRE
     let results = animals
+    console.log(animals)
     console.log("TEST 1")
     console.log(req.query)
     if (req.query){

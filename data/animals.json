@@ -147,6 +147,15 @@
         "goofy"
       ],
       "id": "14"
+    },
+    {
+      "name": "Gloria",
+      "species": "Cat",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "15"
     }
   ]
 }
