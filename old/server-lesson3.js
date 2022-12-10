@@ -3,20 +3,20 @@ const path = require('path'); //
 
 const { animals } = require('./data/animals');
 
-const express = require('express');
+const express = require('express'); 
 const { redirect } = require('statuses');
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; // heroku server or 3001 localhost
 
-const app = express();
+const app = express(); //we can now chain app to routes and methods
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }))
 // parse incoming JSON data
 app.use(express.json());
 
-// this middleware method is a calls all the files under the directory in public to be used
+// this middleware method is a calls all the files under the directory in public to be used, that way, we don't have to be making routes for the css, js, images, and other http links. Everything under the 'public' directory can now be accessed without having a specific server endpoint by instructing the server to make all these files static resources. 
 app.use(express.static('public'));
 
 // FOR API THAT GIVE BACK JUST PLAIN OBJECTS WITH STRINGS
@@ -84,9 +84,11 @@ function createNewAnimal(body, animalsArray){//BODY IS THE ONE ANIMAL, ANIMALS A
   console.log(body, "SHOULD STILL BEE JUST LARRY");
   const animal = body; //TIED TO A NEW VARIABLE
   animalsArray.push(animal);
+  // fs is needed because although we might be able to push our new animal into the array, it's not copying into the actual JSON file, we need to added it to the actual JSON file for it to save since req is only retriving a copy of the data
   fs.writeFileSync( //same as fs.writeFile, but we don't need a callback for it, for smaller sets of data
-    path.join(__dirname, './data/animals.json'),
+    path.join(__dirname, './data/animals.json'), //write our animals.json file in the data subdirectory, with path.join to join the value of dirname, which represents the directory of the file we execute the code in. 
     JSON.stringify({ animals: animalsArray}, null, 2)
+    // Next, we need to save the JavaScript array data as JSON, so we use JSON.stringify() to convert it. The other two arguments used in the method, null and 2, are means of keeping our data formatted. The null argument means we don't want to edit any of our existing data; if we did, we could pass something in there. The 2 indicates we want to create white space between our values to make it more readable. If we were to leave those two arguments out, the entire animals.json file would work, but it would be really hard to read. Animals will be updated to the animalsArray data and stringified
   );
 
   // return finished code to post route for response
@@ -138,7 +140,7 @@ app.get('/api/animals/:id',(req, res) => {
 app.post('/api/animals', (req,res) => {
 
   // set id based on what the next index of the array will be
-
+  // the ID will now be the length of the array, since the index is one less always. 
   req.body.id = animals.length.toString();
 
 
