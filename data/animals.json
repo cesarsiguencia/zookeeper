@@ -138,6 +138,24 @@
         "zany"
       ],
       "id": "13"
+    },
+    {
+      "name": "Rosario",
+      "species": "Bass",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Max",
+      "species": "Dog",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "15"
     }
   ]
 }
