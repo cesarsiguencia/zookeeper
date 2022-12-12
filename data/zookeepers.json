@@ -61,10 +61,23 @@
       "id": "9"
     },
     {
+<<<<<<< HEAD
       "name": "CezzieNYC",
       "age": 25,
       "favoriteAnimal": "Birds",
       "id": "10"
+=======
+      "name": "Cesar",
+      "age": "26",
+      "favoriteAnimal": "Turtle",
+      "id": "10"
+    },
+    {
+      "name": "Pedro",
+      "age": 22,
+      "favoriteAnimal": "Snake",
+      "id": "11"
+>>>>>>> feature/zookeepers
     }
   ]
 }
