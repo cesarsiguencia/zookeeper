@@ -62,7 +62,7 @@
     },
     {
       "name": "Cesar",
-      "age": "26",
+      "age": 26,
       "favoriteAnimal": "Turtle",
       "id": "10"
     },
