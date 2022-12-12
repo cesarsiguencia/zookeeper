@@ -140,36 +140,20 @@
       "id": "13"
     },
     {
-<<<<<<< HEAD
-      "name": "Daffy Duck",
-      "species": "Duck",
-      "diet": "herbivore",
-      "personalityTraits": [
-        "goofy"
-=======
       "name": "Rosario",
       "species": "Bass",
       "diet": "omnivore",
       "personalityTraits": [
         "anxious"
->>>>>>> feature/zookeepers
       ],
       "id": "14"
     },
     {
-<<<<<<< HEAD
-      "name": "Gloria",
-      "species": "Cat",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "anxious"
-=======
       "name": "Max",
       "species": "Dog",
       "diet": "omnivore",
       "personalityTraits": [
         "loving"
->>>>>>> feature/zookeepers
       ],
       "id": "15"
     }

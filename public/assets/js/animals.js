@@ -36,12 +36,7 @@ const getAnimals = (formData = {}) => {
       if(!response.ok){
         return alert('Error:' + response.statusText)
       }
-<<<<<<< HEAD
-      return response.json();
-
-=======
       return response.json()
->>>>>>> feature/zookeepers
     }).then(animalData => {
       console.log(animalData);
       printResults(animalData);
