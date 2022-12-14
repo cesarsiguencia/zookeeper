@@ -82,8 +82,6 @@ test("validates age", () =>{
         favoriteAnimal: "bear",
       };
 
-      //will be invalid because the age here is a string, not a number
-
       const result = validateZookeeper(zookeeper);
 
       const result2 = validateZookeeper(invalidZookeeper)
