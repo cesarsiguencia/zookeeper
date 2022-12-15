@@ -7,7 +7,7 @@ const {
 } = require("../lib/animals.js");
 const { animals } = require("../data/animals");
 
-jest.mock('fs') //this mocks our test so that writeSync won't actually write into our JSON file
+jest.mock('fs')
 
 test("creates an animal object", () => {
   const animal = createNewAnimal(

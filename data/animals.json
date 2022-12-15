@@ -156,6 +156,15 @@
         "loving"
       ],
       "id": "15"
+    },
+    {
+      "name": "Buster",
+      "species": "Dog",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "16"
     }
   ]
 }

@@ -4,7 +4,7 @@ const { filterByQuery, filterById, createNewAnimal, validateAnimal } = require('
 const { animals } = require('../../data/animals')
 
 
-router.get('/animals',(req, res) => { //req means REQUIRE
+router.get('/animals',(req, res) => { 
   let results = animals
   if (req.query){
       results = filterByQuery(req.query, results);
@@ -12,33 +12,23 @@ router.get('/animals',(req, res) => { //req means REQUIRE
   res.json(results)
 })
   
-// filterbyid is for an individual animal, and we are obtaining that by id
 router.get('/animals/:id',(req, res) => {
   const result = filterById(req.params.id, animals);
   console.log(result)
   if(result){
     res.json(result);
   } else {
-    res.sendStatus(404);
+    res.send(404);
   }
     
 })
   
-  //CREATING NEW DATA FROM CLIENT SIDE TO STORE IN OUR JSON FILE
-  
 router.post('/animals', (req,res) => {
-
-  // set id based on what the next index of the array will be
-
   req.body.id = animals.length.toString();
 
-
-  console.log(req.body, "THIS SHOULD BE JUST LARRY"); //THIS SHOULD BE JUST ONE ANIMAL
-  // if any data in req.body is incorrect, send 400 error back
   if(!validateAnimal(req.body)){
     res.status(400).send('The animal is not properly formatted.');
   } else {
-    // add animal to json file and animals array in this function
     const animal = createNewAnimal(req.body, animals)
     res.json(animal); 
   }
