@@ -14,7 +14,6 @@ router.get('/animals',(req, res) => {
   
 router.get('/animals/:id',(req, res) => {
   const result = filterById(req.params.id, animals);
-  console.log(result)
   if(result){
     res.json(result);
   } else {
