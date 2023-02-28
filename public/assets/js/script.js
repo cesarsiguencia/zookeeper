@@ -40,7 +40,7 @@ const handleAnimalFormSubmit = event => {
       alert('Thank you for adding an animal!')
       return response.json();
     } else {
-      alert('Error: ' + response.statusText);
+      alert('Error: ' + response.statusText + ". The animal is not properly formatted.");
     }
   })
 
@@ -68,7 +68,9 @@ const handleZookeeperFormSubmit = event => {
         alert('Thank you for adding a zookeeper!')
         return response.json()
       } else {
-        alert('Error: ' + response.statusText)
+        console.log(response, "response")
+        alert('Error: ' + response.statusText + ". The zookeeper is not properly formatted.")
+
       }
     })
 }
