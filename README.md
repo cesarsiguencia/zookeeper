@@ -1,6 +1,6 @@
 # Zookeeper
 
-Zookeepr is an online animal directory for an imaginary zoo, where the user is able to see the list of animals and zookeepers and their characteristics as well as having the ability to add an either one with their information. Users are able to grab a list of animals and zookeepers through query searches tied to their name, personality, and much more. This is my first back end project using NodeJS and Express that is paired up with a front end.
+Zookeeper is an online animal directory for an imaginary zoo, where the user is able to see the list of animals and zookeepers and their characteristics as well as having the ability to add an either one with their information. Users are able to grab a list of animals and zookeepers through query searches tied to their name, personality, and much more. This is my first back end project using NodeJS and Express that is paired up with a front end.
 
 This application does NOT use a database. <br/>
 Data is written into a JSON file using FS.writeFile module, part of NodeJS.
@@ -12,7 +12,7 @@ Data is written into a JSON file using FS.writeFile module, part of NodeJS.
 
 ### Application Link/Installation
 
-Link: https://zookeepers-cesar-s.herokuapp.com/ 
+Link: https://zookeeper-by-cs.onrender.com/
 
 OR if downloaded locally:
 1. Git clone or download the application and load on VSCode
